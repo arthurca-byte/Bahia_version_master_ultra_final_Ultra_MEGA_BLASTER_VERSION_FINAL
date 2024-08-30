@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+body{
+  background-color: #8f8d8d;
+}
+*{
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+body{
+background-color: rgb(255, 255, 255);
+color: black;
+font-size: 25px;
+
+
+    
+}
+
+.nav_div a:hover{
+    color:black;
+    background-color: white;
+}
+
+.navbar{
+    background: rgb(240, 64, 64);
+    font-family: calibri;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 98.5%;
+    border-radius: 5px;
+}
+
+
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    background-color: rgb(240, 64, 64);
+
+}
+li a{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+    border-radius: 5px;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+
+    }
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    
+}
+
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+h4{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+h5{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+footer{
+    background-color: blueviolet;
+    color: azure;
+    height: 40px;
+    border-radius: 5px;
+}
+footer p{
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+       
+li a {
+  display: block;
+  padding: 8px;
+  display: flex;
+}
+
+
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    }
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold,
+    
+}
+
+#img_01{
+    display: table-cell;
+    float: right;
+    clear: left;
+    overflow: auto;
+    border-radius: 10px;
+    
+}
+
+#pr_01{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+
+#btn {
+    border-radius: 5px;
+    
+}
+#btn a{
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+    
+}
+.btn{
+    position: relative;
+    left: 1300px;
+    bottom: 350px;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+
+footer{
+    background-color: blueviolet;
+    color: azure;
+    height: 40px;
+    border-radius: 5px;
+
+}
+
+
+
+#video{
+    border-radius: 10px;
+}
+.video{
+    right: 1%;
+    top: 50%;
+    position: flex;
+
+
+}
+
+#bandeira{
+    position: relative;
+    left: 75%;
+    bottom: 16%;
+}
+
+#form{
+    position: absolute;
+    right: 1%;
+    bottom: 6px;
+}
+
+#quiz {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: crimson;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 90px;
+  color: #ffffff;
+}
+
+h1 {
+  position: relative;
+  padding-left: 35px;
+  right: 40px;
+  color: #ffffff;
+}
+
+#question {
+  margin-bottom: 20px;
+}
+
+#options {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: rgb(227, 238, 10), 245, 161;
+  color: #131313;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8f8d8d;
+}
+h2{
+  padding-left: 12px;
+  position: relative;
+  top: 12px;
+}
+#section{
+  background-color: #8f8d8d; 
+  width: 500px;  
+  height: 300px; 
+
+}
+
+#section h2{
+  color: white;  
+
+}
+    </style>
+    <link rel="stylesheet" href="Css/style.css">
+    <nav class="navbar">
+        <div class="navdiv">
+            <ul>
+                <li class="nav_div"><a href="index.html"> Pagina Inical</a></li>
+                <li class="nav_div"><a href="index_Principais_fontes_de_renda.html"> Principais Fontes de Renda</a></li>
+                <li class="nav_div"><a href="index_Turismo.html">Turismo</a></li>
+                <li class="nav_div"><a href="Créditos.html">Créditos</a></li>
+                <li class="nav_div"><a href="Quizz.html">Quiz</a></li>
+                
+
+
+
+            </ul>
+        </div>
+        </nav>
+</head>
+<body>
+    <div id="quiz">
+        <p id="length"></p>
+        <h1>Quiz da Bahia</h1>
+        <div id="question"></div>
+        <div id="options"></div>
+      </div>
+    
+  
+  
+      <script src="index.js"></script>
+    <script>
+const quizData =[
+    {
+      question: "Qual é o maior produto do setor primário produzido da Bahia?",
+      options: ["Café", "Cacau", "Algodão", "Açucar"],
+      answer: "Cacau"
+    },
+    {
+      question: "A cidade de Salvador é o primeiro ponto de desembarque dos portugueses? ",
+      options: ["Verdadeiro","Falso"],
+      answer: "Falso"
+    },
+    {
+        question: "A Bahia é a maior exportadora do Brasil. De qual seguinte produto: ",
+        options: ["Barita","Cacau","Latéx","Algodão doce"],
+      answer: "Barita"
+    },
+
+    {
+      question: "A porcentagem de atividades imobiliaras da Bahia? ",
+      options: ["8,7%","9,09%","65,89%","6,8"],
+      answer: "8,7%"
+    },
+    {
+      question: "A cidade de Porto Seguro é conhecida por causa: ",
+      options: ["De suas praias, e ser o local de desembarque dos portuguese.","Segurança e a Torre Eifel","Vida noturna monotoma","Sua culinaria classíca Asiatica"],
+      answer: "De suas praias, e ser o local de desembarque dos portuguese."
+    },
+    {
+      question: "Qual a capital da Bahia? ",
+      options: ["João Neves","Paris","Porto Seguro","Salvador"],
+      answer: "Salvador"
+    },    
+    {
+      question: "O comércio na Bahia tem uma fatia maior do PIB do que as Industrias: ",
+      options: ["Verdadeiro","Falso"],
+      answer: "Falso"
+    },
+    {
+      question: "Clique no qual não é uma culinaria classíca da Bahia:",
+      options: ["Acarajé","Vatapé","Ostras","Moquecas"],
+      answer: "Ostras"
+    },         // Add more questions here...
+    {
+      question: "Qual seguinte cidade é conhecida pelas montanhas ",
+      options: ["Rio de Janeiro","Salvador","Ilhéus","Chapada Diamantina"],
+      answer: "Chapada Diamantina"
+    },
+    {
+      question: "Qual o Token Secreto na Pagina ",
+      options: ["8751","90123","OI_012","8731","7821"],
+      answer: "8731"
+    },
+    {
+      question: "Qual destes não é um evento importante da Bahia",
+      options: ["Carnaval de Salvador","Festival de Lençóis","Carnaval de Porto Seguro","Festival de Lâmpadas"],
+      answer: "Carnaval de Porto Seguro"
+    },
+    {
+      question: "Qual destes é uma música importante da Bahia",
+      options: ["Sertanejo","Axé","As duas anteriores","Nenhuma"],
+      answer: "Axé"
+    },
+    {
+      question: "Qual destes é um escritor Bahiano?",
+      options: ["Alphonsus de Guimaraens","Carlos Drummond de Andrade","Carolina Maria de Jesus"," Rubem Fonseca","Adélia Prado","Jorge Amado,"],
+      answer: "Jorge Amado,"
+    },
+    {
+      question: "Qual destes é um Importante setor Bahiano da Agropecuaria?",
+      options: ["Soja","Milho","Feijão","Algodão","Todas As Anteriores",],
+      answer: "Todas As Anteriores"
+    },
+    {
+      question: "Me diga uma Importante Refinaria da Bahia?",
+      options: ["Refinaria Federal Da Bahia","RGDB","Refinaria Presidente Getúlio Vargas","Refinaria Landulpho Alves","Nenhuma das Anteriores",],
+      answer: "Refinaria Landulpho Alves"
+    },
+    {
+      question: "Onde fica Ela?",
+      options: ["São Francisco do Conde","Sergipe","Salvador","Ilheus",],
+      answer: "São Francisco do Conde"
+    },
+    {
+      question: "Me diga Qual fica na Bahia",
+      options: ["Cristo Redentor","Pelourinho","Praia de Salvador Jutucará","Kioesque",],
+      answer: "Pelourinho"
+    },
+     {
+      question: "A Bahia é o estado que mais faz divisa com outros estados.",
+      options: ["Verdadeiro","Falso"],
+      answer: "Verdadeiro"
+    },
+    {
+      question: "Sobre a economia da Bahia é INCORRETO afirmar que:",
+      options: ["a) A agricultura é de fundamental importância para a economia estadual, com destaque para os cultivos de cacau, cana-de-açúcar, soja, mandioca, mamona, etc.","b) O setor industrial é impulsionado pelo segmento petroquímico, visto que a Bahia está entre os maiores produtores de petróleo do Brasil.","c) O território baiano, que possui grandes reservas minerais, abriga a única mina de urânio em operação na América Latina.","c) O território baiano, que possui grandes reservas minerais, abriga a única mina de urânio em operação na América Latina.","e) Em razão do clima, a pecuária apresenta pouca representatividade para a economia local. Essa atividade se limita apenas à criação de gados."],
+      answer: "e) Em razão do clima, a pecuária apresenta pouca representatividade para a economia local. Essa atividade se limita apenas à criação de gados."
+    },
+    {
+      question: "Qual é a data da independência da Bahia?",
+      options:["03 de julho","02 de feveiro","18 de março","02 de julho"],
+      answer:"02 de julho"
+    },
+    {
+      question:" A Bahia é o estado que tem o maior litoral",
+      options: ["Falso","Verdadeiro"],
+      answer: "Verdadeiro"
+    },
+    {
+      
+      question:"Na Bahia, há um clube que foi o primeiro campeão brasileiro da história.",
+      options: ["Verdadeiro","Falso"],
+      answer: "Verdadeiro"
+    }
+  
+
+    
+  ];
+  
+  const questionElement = document.getElementById("question");
+  const optionsElement = document.getElementById("options");
+  
+  let quizzAccept = quizData.length * 0.9
+  let currentQuestion = 0;
+  let score = 0;
+  
+  function showQuestion() {
+    const question = quizData[currentQuestion];
+    questionElement.innerText = question.question;
+  
+    optionsElement.innerHTML = "";
+    question.options.forEach(option => {
+      const button = document.createElement("button");
+      button.innerText = option;
+      optionsElement.appendChild(button);
+      button.addEventListener("click", selectAnswer);
+    });
+  }
+  
+  function selectAnswer(e) {
+    const selectedButton = e.target;
+    const answer = quizData[currentQuestion].answer;
+  
+    if (selectedButton.innerText === answer) {
+        score++;
+        swal.fire({
+            icon: "success",
+            title: "Acertou!",
+            text:  "Boa!!"
+          
+
+      }
+    )
+      
+      
+  }
+    else{
+        swal.fire({
+            icon: "error",
+            title: "Errou!!",
+            text:  "Que Pena!"
+        })
+    
+
+
+
+    }
+
+
+    currentQuestion++;
+  
+    if (currentQuestion < quizData.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }
+  
+  function showResult() {
+    quiz.innerHTML = `
+      <h1>Quiz Completado!</h1>
+      <p>Sua Pontuação: ${score}/${quizData.length}</p>
+      
+    `;
+     if(score >= quizzAccept){
+        swal.fire({
+            icon: "success",
+            title: "Parabéns",
+            text:  "Você alcançou Passou mostre essa tela para ganhar um brinde!!",
+            
+           
+            
+
+       
+          }
+        )
+       
+}
+     
+    else{
+        swal.fire({
+            icon: "error",
+            title: "Tente na proxima",
+            text: "Que pena."
+        })
+     }
+
+    }
+  
+  showQuestion();
+    </script>
+  
+</body>
+</html>
